@@ -1,3 +1,4 @@
+var current;
 var chico=[
   { description:"Upper Park",picture:"http://www.becnet.org/sites/default/files/event-photos/557977_10151427591623089_799073585_n.jpg",
 from:"http://www.becnet.org/events/earth-day-celebration-upper-bidwell-park"},
@@ -27,6 +28,8 @@ function shuffleGallery()
   }
   while (randomIndex==current );
 current=randomIndex;
-
-  console.log(chico[current]);
+document.getElementById("picture").src = chico[current].picture;
+  document.getElementById("caption").innerHTML = chico[current].description;
+  document.getElementById("source").innerHTML = "image courtesy of: " + chico[current].from;
 }
+  //console.log(chico[current]);
